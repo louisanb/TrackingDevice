@@ -419,9 +419,9 @@ void ProcessGPS(String message) {
     MT = sTemp.substring(0, 2).toInt();//converting string to int  
     mT=MT-4;//time zone correction
     Mt=String(mT);//converting corrected time from int to string
-//    Serial.println("UTC Time/Before: '" + sTemp + "'");
+    //Serial.println("UTC Time/Before: '" + sTemp + "'");
     sTime = Mt + ":" + sTemp.substring(2,4) + ":" + sTemp.substring(4,6);
-//    Serial.println("UTC Time: " + sTime);
+    //Serial.println("UTC Time: " + sTime);
     message = CSV_Remove(message);
     //    Serial.print("A/V: ");
     if (CSV_Next(message) == "A") {
