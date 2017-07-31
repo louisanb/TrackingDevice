@@ -1,27 +1,4 @@
-/*
-  Tilt CPU Code
- 
- Serial 0       9600  Debug communication port, not used in production environment
- SoftSer 10,11  9600  Celluar Breakout Board with SM5100B chipset (SoftSerial)
- Com 1         57600  GPS
- Com 2          9600  OpenLog - Used for SD Card breakout board for data logging purposes
- Com 3         38400  ArduIMU (No GPS)
- 
- This works only on the Arduino Mega
- 
- 000  2014/02/14        Initial Release
- 001  2014/04/15       Updates to log 3-dimensional GPS data
-                                  Updates for 2-way communication of GPS Location
- 002  2014/05/14    Add more wait states, CellWaitForChar(char)
- */
-/* 
-  modified by Qiyu(louis) An 
-action: (any changes can be easy found by search QA) 
-changed the UTC time to Poughkeepsie time by subtracting 4 hrs in the "void ProcessGPS(String message)" section
-Added easy read version of the data on SD card and also can be shown on serial monitor after enable the codes in void loop section
-Added ability to stop the serial communication with serial monitor in void loop function for testing purposes
-Added some clearification on some parts of the orginal codes 
-*/
+
 //define serCell to enable Celluler feature
 //#define serCell
 #define DEBUG
